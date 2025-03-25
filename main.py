@@ -1,12 +1,10 @@
+from stats import get_num_words
+
 
 def sort_on(dict):
     return dict["count"]
 
 ### end helper
-
-def count_words(text):
-    words = text.split()
-    return len(words)
 
 def count_characters(text):
     char_dict = {}
@@ -19,7 +17,7 @@ def count_characters(text):
     return char_dict
 
 def print_report(filename, text):
-    words = count_words(text)
+    words = get_num_words(text)
     chars = count_characters(text)
     dict_list = []
 
